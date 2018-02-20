@@ -1,0 +1,14 @@
+c:\users\ars\documents\visual studio 2017\Projects\WpfApp9\WpfApp9\bin\Debug\WpfApp9.exe.config
+c:\users\ars\documents\visual studio 2017\Projects\WpfApp9\WpfApp9\bin\Debug\WpfApp9.exe
+c:\users\ars\documents\visual studio 2017\Projects\WpfApp9\WpfApp9\bin\Debug\WpfApp9.pdb
+c:\users\ars\documents\visual studio 2017\Projects\WpfApp9\WpfApp9\obj\Debug\WpfApp9.csprojResolveAssemblyReference.cache
+c:\users\ars\documents\visual studio 2017\Projects\WpfApp9\WpfApp9\obj\Debug\MainWindow.g.cs
+c:\users\ars\documents\visual studio 2017\Projects\WpfApp9\WpfApp9\obj\Debug\App.g.cs
+c:\users\ars\documents\visual studio 2017\Projects\WpfApp9\WpfApp9\obj\Debug\WpfApp9_MarkupCompile.cache
+c:\users\ars\documents\visual studio 2017\Projects\WpfApp9\WpfApp9\obj\Debug\WpfApp9_MarkupCompile.lref
+c:\users\ars\documents\visual studio 2017\Projects\WpfApp9\WpfApp9\obj\Debug\MainWindow.baml
+c:\users\ars\documents\visual studio 2017\Projects\WpfApp9\WpfApp9\obj\Debug\WpfApp9.g.resources
+c:\users\ars\documents\visual studio 2017\Projects\WpfApp9\WpfApp9\obj\Debug\WpfApp9.Properties.Resources.resources
+c:\users\ars\documents\visual studio 2017\Projects\WpfApp9\WpfApp9\obj\Debug\WpfApp9.csproj.GenerateResource.Cache
+c:\users\ars\documents\visual studio 2017\Projects\WpfApp9\WpfApp9\obj\Debug\WpfApp9.exe
+c:\users\ars\documents\visual studio 2017\Projects\WpfApp9\WpfApp9\obj\Debug\WpfApp9.pdb
