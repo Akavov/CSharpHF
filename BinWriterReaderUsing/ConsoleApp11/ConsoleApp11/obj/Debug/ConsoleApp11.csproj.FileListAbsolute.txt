@@ -1,0 +1,6 @@
+c:\users\ars\documents\visual studio 2017\Projects\ConsoleApp11\ConsoleApp11\obj\Debug\ConsoleApp11.csprojResolveAssemblyReference.cache
+C:\Users\Ars\Documents\Visual Studio 2017\Projects\ConsoleApp11\ConsoleApp11\bin\Debug\BinaryWriterConsole.exe.config
+C:\Users\Ars\Documents\Visual Studio 2017\Projects\ConsoleApp11\ConsoleApp11\bin\Debug\BinaryWriterConsole.exe
+C:\Users\Ars\Documents\Visual Studio 2017\Projects\ConsoleApp11\ConsoleApp11\bin\Debug\BinaryWriterConsole.pdb
+C:\Users\Ars\Documents\Visual Studio 2017\Projects\ConsoleApp11\ConsoleApp11\obj\Debug\BinaryWriterConsole.exe
+C:\Users\Ars\Documents\Visual Studio 2017\Projects\ConsoleApp11\ConsoleApp11\obj\Debug\BinaryWriterConsole.pdb
