@@ -1,0 +1,5 @@
+c:\users\ars\documents\visual studio 2017\Projects\ConsoleApp7\ConsoleApp7\bin\Debug\ConsoleApp7.exe.config
+c:\users\ars\documents\visual studio 2017\Projects\ConsoleApp7\ConsoleApp7\bin\Debug\ConsoleApp7.exe
+c:\users\ars\documents\visual studio 2017\Projects\ConsoleApp7\ConsoleApp7\bin\Debug\ConsoleApp7.pdb
+c:\users\ars\documents\visual studio 2017\Projects\ConsoleApp7\ConsoleApp7\obj\Debug\ConsoleApp7.exe
+c:\users\ars\documents\visual studio 2017\Projects\ConsoleApp7\ConsoleApp7\obj\Debug\ConsoleApp7.pdb
