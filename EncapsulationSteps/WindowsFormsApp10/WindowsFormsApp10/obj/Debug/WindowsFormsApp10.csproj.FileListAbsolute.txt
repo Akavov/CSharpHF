@@ -1,0 +1,9 @@
+c:\users\ars\documents\visual studio 2017\Projects\WindowsFormsApp10\WindowsFormsApp10\bin\Debug\WindowsFormsApp10.exe.config
+c:\users\ars\documents\visual studio 2017\Projects\WindowsFormsApp10\WindowsFormsApp10\bin\Debug\WindowsFormsApp10.exe
+c:\users\ars\documents\visual studio 2017\Projects\WindowsFormsApp10\WindowsFormsApp10\bin\Debug\WindowsFormsApp10.pdb
+c:\users\ars\documents\visual studio 2017\Projects\WindowsFormsApp10\WindowsFormsApp10\obj\Debug\WindowsFormsApp10.csprojResolveAssemblyReference.cache
+c:\users\ars\documents\visual studio 2017\Projects\WindowsFormsApp10\WindowsFormsApp10\obj\Debug\WindowsFormsApp10.Form1.resources
+c:\users\ars\documents\visual studio 2017\Projects\WindowsFormsApp10\WindowsFormsApp10\obj\Debug\WindowsFormsApp10.Properties.Resources.resources
+c:\users\ars\documents\visual studio 2017\Projects\WindowsFormsApp10\WindowsFormsApp10\obj\Debug\WindowsFormsApp10.csproj.GenerateResource.Cache
+c:\users\ars\documents\visual studio 2017\Projects\WindowsFormsApp10\WindowsFormsApp10\obj\Debug\WindowsFormsApp10.exe
+c:\users\ars\documents\visual studio 2017\Projects\WindowsFormsApp10\WindowsFormsApp10\obj\Debug\WindowsFormsApp10.pdb
