@@ -1,0 +1,5 @@
+c:\users\ars\documents\visual studio 2017\Projects\ConsoleApp8\ConsoleApp8\bin\Release\ConsoleApp8.exe.config
+c:\users\ars\documents\visual studio 2017\Projects\ConsoleApp8\ConsoleApp8\bin\Release\ConsoleApp8.exe
+c:\users\ars\documents\visual studio 2017\Projects\ConsoleApp8\ConsoleApp8\bin\Release\ConsoleApp8.pdb
+c:\users\ars\documents\visual studio 2017\Projects\ConsoleApp8\ConsoleApp8\obj\Release\ConsoleApp8.exe
+c:\users\ars\documents\visual studio 2017\Projects\ConsoleApp8\ConsoleApp8\obj\Release\ConsoleApp8.pdb
