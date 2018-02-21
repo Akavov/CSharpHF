@@ -1,0 +1,17 @@
+﻿<Window x:Class="Async.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Async"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="214.851" Width="252.787">
+    <Grid>
+        <StackPanel >
+            <TextBlock x:Name="progress" HorizontalAlignment="Left" Margin="5"/>
+            <CheckBox x:Name="useAwaitAsync" IsChecked="True" Content="Use await/async" Margin="5"/>
+            <Button x:Name="countButton" Content="Start counting"
+                    HorizontalAlignment="Left" Click="countButton_Click" Margin="5,5,0,5"/>
+        </StackPanel>
+    </Grid>
+</Window>
