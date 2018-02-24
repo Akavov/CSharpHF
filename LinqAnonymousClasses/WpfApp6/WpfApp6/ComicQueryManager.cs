@@ -27,10 +27,24 @@ namespace WpfApp6
                 new ComicQuery("LINQ makes query simpler", "Query example",
                 "Let`s demonstrate flexibility of LINQ",
                 CreateImageFromAsserts("purple_250x250.jpg")),
+
                 new ComicQuery("Expensive comics","Price over 500$",
                 "Comics with price more then 500$" +
                 "this thing let`s understand which comics buyer want most.",
                 CreateImageFromAsserts("captain_amazing_250x250.jpg.jpg")),
+
+                new ComicQuery("Universal Linq1","Change all returns by queries",
+                "This code append string to the end of every string in array.",
+                CreateImageFromAsserts("bluegray_250x250.jpg")),
+
+                new ComicQuery("Universal Linq2", "Calculations in collections",
+                "Linq provides extending methods to collections (and etc)"+
+                "what implements interface IEnumerable<T>",
+                CreateImageFromAsserts("purple_250x250.jpg")),
+
+                new ComicQuery("Universal Linq3","Save all results to new sequence",
+                "Sometimes Linq results are need to save separately",
+                CreateImageFromAsserts("bluegray_250x250.jpg")),
             };
         }
 
@@ -55,9 +69,73 @@ namespace WpfApp6
             {
                 case "LINQ makes query simpler": LinqMakesQueriesEasy(); break;
                 case "Expensive comics":ExpensiveComics();break;
+                case "Universal Linq1":LinqIsVersatile1();break;
+                case "Universal Linq2":LinqIsVersatile2();break;
+                case "Universal Linq3":LinqIsVersatile3();break;
                 default:
                     break;
             }
+        }
+
+        private void LinqIsVersatile3()
+        {
+            List<int> listOfNumbers = new List<int>();
+            for (int i = 0; i <= 10000; i++)
+            {
+                listOfNumbers.Add(i);
+            }
+            var under50sorted =
+                from number in listOfNumbers
+                where number < 50
+                orderby number descending
+                select number;
+            var firstFive = under50sorted.Take(6);
+
+            List<int> shortList = firstFive.ToList();
+            foreach (int n in shortList)
+            {
+                CurrentQueryResults.Add(CreateAnonymousListViewItem(n.ToString(), "bluegray_250x250.jpg"));
+            }
+        }
+
+        private void LinqIsVersatile2()
+        {
+            Random random = new Random();
+            List<int> listOfNumbers = new List<int>();
+            int length = random.Next(50, 150);
+            for (int i = 0; i < length; i++)
+            {
+                listOfNumbers.Add(random.Next(100));
+            }
+
+            CurrentQueryResults.Clear();
+            CurrentQueryResults.Add(CreateAnonymousListViewItem(
+                String.Format("There are {0} numbers", listOfNumbers.Count())));
+            CurrentQueryResults.Add(CreateAnonymousListViewItem(String.Format("The smallest is {0}",listOfNumbers.Min())));
+            CurrentQueryResults.Add(CreateAnonymousListViewItem(String.Format("The biggest is {0}", listOfNumbers.Max())));
+            CurrentQueryResults.Add(CreateAnonymousListViewItem(String.Format("The sum is {0}", listOfNumbers.Sum())));
+            CurrentQueryResults.Add(CreateAnonymousListViewItem(String.Format("The average is {0:F2}", listOfNumbers.Average())));
+        }
+
+        private void LinqIsVersatile1()
+        {
+            string[] sandwiches = {"ham and cheese","salami with mayo",
+            "turkey and swiss","chicken cutlet" };
+            var sandwichesOnRye = from sandwich in sandwiches
+                                  select sandwich + " on rye";
+            CurrentQueryResults.Clear();
+            foreach (var sandwich in sandwichesOnRye)
+            {
+                CurrentQueryResults.Add(CreateAnonymousListViewItem(sandwich, "bluegray_250x250.jpg"));
+            }
+        }
+
+        private object CreateAnonymousListViewItem(string title, string image="purple_250x250.jpg")
+        {
+            return new {
+                Title = title,
+                Image = CreateImageFromAsserts(image),
+           };
         }
 
         public static IEnumerable<Comic> BuildCatalog()
