@@ -8,6 +8,7 @@ using System.Windows.Media.Imaging;
 
 namespace WpfApp6
 {
+    enum PriceRange { Cheap,Midrange,Expensive}
     class ComicQueryManager
     {
         public ObservableCollection<ComicQuery> AvailableQueries { get; private set; }
@@ -45,6 +46,15 @@ namespace WpfApp6
                 new ComicQuery("Universal Linq3","Save all results to new sequence",
                 "Sometimes Linq results are need to save separately",
                 CreateImageFromAsserts("bluegray_250x250.jpg")),
+
+                new ComicQuery("Group comics by price range","Combine customer`s values into groups",
+                "Customer buys a lot of cheap comic books, some midrange comic books and a few expensive ones," +
+                "and he wants to know what his options are begore he decides what comics to buy.",
+                CreateImageFromAsserts("purple_250x250.jpg")),
+
+                new ComicQuery("Join purchases with prices", "Let`s see if customer drives a hard bargin",
+                "This query creates a list of Purchase classes that contain customer`s purchases and compares them with the prices he found on other list",
+                CreateImageFromAsserts("captain_amazing_250x250.jpg.jpg")),
             };
         }
 
@@ -72,8 +82,67 @@ namespace WpfApp6
                 case "Universal Linq1":LinqIsVersatile1();break;
                 case "Universal Linq2":LinqIsVersatile2();break;
                 case "Universal Linq3":LinqIsVersatile3();break;
+                case "Group comics by price range":CombineCustomersValuesIntoGroups();break;
+                case "Join purchases with prices": JoinPurchasesWithPrices();break;
                 default:
                     break;
+            }
+        }
+
+        private void JoinPurchasesWithPrices()
+        {
+            IEnumerable<Comic> comics = BuildCatalog();
+            Dictionary<int, decimal> values = GetPrices();
+            IEnumerable<Purchase> purchases = Purchase.FindPurchases();
+
+            var results =
+                from comic in comics
+                join purchase in purchases
+                on comic.Issue equals purchase.Issue
+                orderby comic.Issue ascending
+                select new {
+                    Comic = comic,
+                    Price = purchase.Price,
+                    Title=comic.Name,
+                    Subtitle="Issue #"+comic.Issue,
+                    Description=String.Format("Was bought for {0:c}",purchase.Price),
+                    Image=CreateImageFromAsserts("captain_amazin_250x250.jpg.jpg"),
+                };
+
+            decimal othersListValue = 0;
+            decimal totalSpent = 0;
+            foreach (var result in results)
+            {
+                othersListValue += values[result.Comic.Issue];
+                totalSpent += result.Price;
+                CurrentQueryResults.Add(result);
+
+            }
+            Title = String.Format("I spent {0:c} for comics costs {1:c}",
+                totalSpent, othersListValue);
+        }
+
+        
+
+        private void CombineCustomersValuesIntoGroups()
+        {
+            Dictionary<int, decimal> values = GetPrices();
+
+            var priceGroups =
+                from pair in values
+                group pair.Key by EvaluatePrice(pair.Value)
+                into priceGroup
+                orderby priceGroup.Key descending
+                select priceGroup;
+            foreach (var group in priceGroups)
+            {
+                string message = String.Format("There are {0} {1} comics: issues",
+                    group.Count(), group.Key);
+                foreach (var price in group)
+                {
+                    message += price.ToString() + " ";
+                }
+                CurrentQueryResults.Add(CreateAnonymousListViewItem(message, "purple_250x250.jpg"));
             }
         }
 
@@ -136,6 +205,18 @@ namespace WpfApp6
                 Title = title,
                 Image = CreateImageFromAsserts(image),
            };
+        }
+        private static PriceRange EvaluatePrice(decimal price)
+        {
+            if (price < 100M)
+            {
+                return PriceRange.Cheap;
+            }
+            else if (price < 1000M)
+            {
+                return PriceRange.Midrange;
+            }
+            else return PriceRange.Expensive;
         }
 
         public static IEnumerable<Comic> BuildCatalog()
