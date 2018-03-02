@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.6
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AreaLibrary", "AreaLibrary\AreaLibrary.csproj", "{A39FD70E-1A2D-43BA-B18A-0DF552D40A27}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AreaTest", "AreaTest\AreaTest.csproj", "{5D988035-EC60-4F3B-BC35-F3DA4B62A213}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A39FD70E-1A2D-43BA-B18A-0DF552D40A27}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A39FD70E-1A2D-43BA-B18A-0DF552D40A27}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A39FD70E-1A2D-43BA-B18A-0DF552D40A27}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A39FD70E-1A2D-43BA-B18A-0DF552D40A27}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5D988035-EC60-4F3B-BC35-F3DA4B62A213}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D988035-EC60-4F3B-BC35-F3DA4B62A213}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D988035-EC60-4F3B-BC35-F3DA4B62A213}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D988035-EC60-4F3B-BC35-F3DA4B62A213}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
