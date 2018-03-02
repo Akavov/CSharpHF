@@ -1,0 +1,1 @@
+Made a method that calls API function PAY and receiving XML response.
