@@ -12,7 +12,7 @@ namespace AreaTest
         {   //Arrange
             RightTriangle triangle = new RightTriangle() { SideA = 5, SideC = 5 };
             //Act
-            double area = Calculate.Area(triangle);
+            double area = Calculate.makeCalculation(triangle);
             //Assert
             Assert.AreEqual(12, area);
         }
@@ -23,7 +23,7 @@ namespace AreaTest
             //Arrange
             Circle circle = new Circle() { Radius = 5 };
             //Act
-            double area = Calculate.Area(circle);
+            double area = Calculate.makeCalculation(circle);
             //Assert
             double expected = 78.5398163397448;
             Assert.AreEqual(expected, area, 0.0000001);

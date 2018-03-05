@@ -8,5 +8,10 @@ namespace AreaLibrary
     {
         public int SideA { get; set; }
         public int SideC { get; set; }
+
+        public override double GetSquare()
+        {
+            return (SideA * SideC) / 2;
+        }
     }
 }
