@@ -12,7 +12,16 @@ namespace AreaTest
         {   //Arrange
             RightTriangle triangle = new RightTriangle() { SideA = 5, SideC = 5 };
             //Act
-            double area = Calculate.makeCalculation(triangle);
+            try
+            {
+               double area = Calculate.makeCalculation(triangle);
+            }
+            catch (NotImplementedException notImp)
+            {
+                Console.WriteLine(notImp.Message);
+            }
+
+            
             //Assert
             Assert.AreEqual(12, area);
         }
